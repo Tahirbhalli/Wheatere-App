@@ -2,8 +2,12 @@ import './style/main.scss';
 
 const man = (data) => {
   console.log(data);
-  const a = document.querySelector('div');
+  let a = document.querySelector('#weather');
   a.innerText = data.weather[0].description;
+  a = document.querySelector('#temprature');
+  a.innerText += data.main.temp_max - 273.15;
+  a = document.querySelector('#wind');
+  a.innerText += data.wind.speed;
 };
 const apiError = (err) => {
   alert(err);
