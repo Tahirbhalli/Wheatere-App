@@ -4,7 +4,7 @@ const main = (data) => {
   console.log(data);
   const table = document.querySelector('table');
   table.style.height = '100px';
-  if (data.weather[0].main === 'drizle' || data.weather[0].main === 'rainy') {
+  if (data.weather[0].main === 'Drizle' || data.weather[0].main === 'Thunderstorm') {
     table.style.backgroundImage = 'url(https://media0.giphy.com/media/xUOwGoNa2uX6M170d2/giphy.gif)';
   } else if (data.weather[0].main === 'hot') {
     table.style.backgroundImage = 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQIffUkHMZ8UXvqNEUHPh71_CCrexatqjSqRA&usqp=CAU)';
